@@ -1,4 +1,433 @@
-//
-//
-//
-//
+// Custom.scss
+// Option A: Include all of Bootstrap
+// Include any default variable overrides here (though functions won't be available)
+// Then add additional custom code here
+
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+:root {
+  --bg-primary: #000000;
+  --bg-dark: #000000;
+  --body-bg: #000000;
+  --light-color: white;
+}
+
+/* GENERAL */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Maven Pro", sans-serif;
+  color: #ffffff;
+  line-height: 1rem;
+  background-color: var(--body-bg);
+  min-width: 600 px;
+}
+
+h1 {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: x-large; 
+}
+
+h3 {
+  font-size: medium;
+}
+
+p {
+  font-size: small;
+}
+
+a {
+  font-size: medium;
+  color:#ffffff;
+  text-decoration: none;
+}
+
+button {
+  background-color: #ffffff;
+  font-size: medium;
+  font-weight: bolder;
+  color: #000000;
+  border: none;
+  padding: 8px 20px 8px 20px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+/* HEADER */
+
+.container-fluid {
+  width: 80%;
+}
+
+.logo {
+  height: 80px;
+}
+
+/* HERO */
+
+#hero {
+  height: 320px;
+  background-color: #000000;
+  background-color: rgba(0,0,0,.5);
+  background-blend-mode: multiply;
+  background-image: url(../images/bg_01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 800px) {
+  #hero {
+    height: 320px;
+  }
+}
+
+.hero-01 {
+  display:flex;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+  
+.hero-02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 80%;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-02 {
+    width: 80%;
+  }
+}
+
+#hero h1 h2 {
+  width: 75%;
+}
+
+#hero p {
+  width: 50%;
+}
+
+@media screen and (max-width: 800px) {
+  #hero p {
+    width: 100%;
+  }
+}
+
+/* CTA */
+
+#cta {
+  height: 300px;
+}
+
+.cta-01 {
+  display:flex;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+  
+.cta-02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 80%;
+}
+
+@media screen and (max-width: 600px) {
+  .cta-02 {
+      width: 80%;
+  }
+}
+
+#cta h1 {
+  max-width: 75%;
+   padding-bottom: 20px;
+}
+
+/* SERVICES */
+
+.services-01 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+  
+.services-02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 80%;
+}
+
+@media screen and (max-width: 600px) {
+  .services-02 {
+    width: 80%;
+  }
+}
+
+.services-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .services-card {
+    flex-direction: column;
+  }
+}
+
+.services-card-left {
+  display:flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-right: 40px;
+  min-width: 50%;
+}
+
+@media screen and (max-width: 800px) {
+  .services-card-left {
+    padding: 0px;
+  }
+}
+
+.services-card img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.services-card-right {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 50%;
+}
+
+.services-card-right p {
+  width: 80%;
+}
+
+@media screen and (max-width: 800px) {
+  .services-card p {
+    width: 100%;
+  }
+}
+
+.services-card-right button {
+  margin-right: 20px;
+}
+
+/* WORKS */
+
+.works-01 {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+  
+.works-02 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+@media screen and (max-width: 600px) {
+  .works-02 {
+    width: 80%;
+  }
+}
+
+.works-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 240px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 240px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .works-card {
+    width: 360px;
+    padding-right: 0px;
+  }
+}
+
+.works-card img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.works-card p {
+  display: flex;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .works-card p {display:none;
+  }
+}
+
+.works-card button {
+  flex-shrink: 0;
+  width: 120px;
+}
+
+/* FOOTER */
+
+#footer {
+  margin-top: auto;
+  background-color: var(--bg-primary);
+  height: 100px;
+  color: var(--light-color);
+  font-size: small;
+}
+  
+.footer-01 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+  
+.footer-02 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+  
+@media screen and (max-width: 600px) {
+  .footer-02 {
+    width: 80%;
+  }
+}
+
+.footer-left {
+   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 1;
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: auto;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: flex-end;
+  flex-shrink: 1;
+}
+
+.menu {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+.footer-center li {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+  
+.icon {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: baseline;
+  margin-bottom: 0;
+}
+
+.footer-icon li {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.footer-logo {
+  width: 40px;
+  height: auto;
+}
+
+#footer a {
+  font-size: smaller;
+}
+
+#footer p {
+  font-size:x-small;
+  padding: 0;
+  margin: 0;
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 960px) {
+  #footer p {display:none;
+  }
+}
+
+#footer button {
+  background-color: #ffffff;
+  font-size: smaller;
+  font-weight: bolder;
+  color: #000000;
+  border: none;
+  padding: 2px 12px 2px 12px;
+  margin: 0px;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 1080px) {
+  #footer button {display:none;
+  }
+}
+
+#footer img {
+    height: 20px;
+    width: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+}
