@@ -11845,6 +11845,20 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+  }
+  h1, .h1,
+  h2,
+  .h2,
+  p,
+  li,
+  .brief-desc a,
+  .material-icons-outlined {
+    color: white !important;
+  }
+}
 :root {
   --bg-primary: #000000;
   --bg-dark: #000000;
@@ -12147,7 +12161,7 @@ button {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 70%;
+  width: 80%;
 }
 
 @media screen and (max-width: 600px) {
